@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://csyxphhd7es8r"]
+
+[ext_resource type="Texture2D" uid="uid://dsqhsgoil40uw" path="res://assets/menpau.png" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://b1xs2sbb5ueki" path="res://scenes/dragon.tscn" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://ch5a1va1dhtth" path="res://scenes/hud.tscn" id="3_lbhrr"]
+
+[node name="Game" type="Node2D" unique_id=326632933]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2079467730]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_uwrxv")
+
+[node name="Dragon" parent="." unique_id=546860644 instance=ExtResource("2_lnu2h")]
+position = Vector2(354, 247)
+
+[node name="HUD" parent="." unique_id=1561195538 instance=ExtResource("3_lbhrr")]

@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://k0yetfu3kthb"]
+
+[ext_resource type="Script" uid="uid://dymkjtriwgev8" path="res://scripts/menu.gd" id="1_vjb58"]
+[ext_resource type="Texture2D" uid="uid://dsqhsgoil40uw" path="res://assets/menpau.png" id="1_yqeox"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ysmq"]
+bg_color = Color(0, 0, 0, 0.8980392)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjb58"]
+bg_color = Color(0, 0, 0, 0.84313726)
+
+[node name="Menu" type="Node2D" unique_id=1167741504]
+script = ExtResource("1_vjb58")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=687095596]
+offset_right = 1154.0
+offset_bottom = 645.0
+texture = ExtResource("1_yqeox")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Play" type="Button" parent="." unique_id=640649677]
+offset_left = 319.0
+offset_top = 165.0
+offset_right = 849.0
+offset_bottom = 305.0
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_5ysmq")
+text = "Play"
+
+[node name="Exit" type="Button" parent="." unique_id=695636035]
+offset_left = 320.0
+offset_top = 354.0
+offset_right = 850.0
+offset_bottom = 494.0
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_vjb58")
+text = "Exit
+"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
