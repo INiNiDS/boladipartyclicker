@@ -2,6 +2,10 @@
 
 [ext_resource type="Script" uid="uid://da51yc0g474n4" path="res://scripts/dragon.gd" id="1_5q8uj"]
 [ext_resource type="Texture2D" uid="uid://cj1lvk1i0egjh" path="res://assets/sss.png" id="1_vfigm"]
+[ext_resource type="Texture2D" uid="uid://habe63qruion" path="res://assets/under.png" id="3_kcfnc"]
+[ext_resource type="Texture2D" uid="uid://dsbjd7bc6lmh7" path="res://assets/over.png" id="4_y46cm"]
+[ext_resource type="Texture2D" uid="uid://m353iom2463j" path="res://assets/progress.png" id="5_2yk6i"]
+[ext_resource type="Texture2D" uid="uid://cjavjo0ks7eg7" path="res://assets/progress2.png" id="6_y46cm"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_k6hos"]
 diffuse_texture = ExtResource("1_vfigm")
@@ -21,6 +25,29 @@ ignore_texture_size = true
 
 [node name="Timer" type="Timer" parent="." unique_id=597066431]
 wait_time = 1.706
+one_shot = true
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1603535291]
+offset_left = 428.0
+offset_top = 4.0
+offset_right = 829.0
+offset_bottom = 64.0
+max_value = 200.0
+value = 200.0
+texture_under = ExtResource("3_kcfnc")
+texture_over = ExtResource("4_y46cm")
+texture_progress = ExtResource("5_2yk6i")
+
+[node name="TextureProgressBar2" type="TextureProgressBar" parent="." unique_id=1539279253]
+offset_left = 55.0
+offset_top = 189.0
+offset_right = 456.0
+offset_bottom = 249.0
+rotation = -0.39618975
+step = 0.1
+texture_under = ExtResource("3_kcfnc")
+texture_over = ExtResource("4_y46cm")
+texture_progress = ExtResource("6_y46cm")
 
 [connection signal="button_down" from="TextureButton" to="." method="_on_texture_button_button_down"]
 [connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]

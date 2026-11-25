@@ -27,8 +27,8 @@ func load_data() -> void:
 	var config: ConfigFile = ConfigFile.new()
 	var err: Error = config.load(SAVE_PATH)
 	if err == OK:
-		config.get_value("GameData", "blood_1", 0)
-		config.set_value("GameData", "pressed_time", 10)		
+		blood_1 = config.get_value("GameData", "blood_1", 0)
+		pressed_time = config.get_value("GameData", "pressed_time", 10)		
 		
 
 func reset() -> void:

@@ -16,23 +16,29 @@ script = ExtResource("1_vjb58")
 offset_right = 1154.0
 offset_bottom = 645.0
 texture = ExtResource("1_yqeox")
-expand_mode = 1
 stretch_mode = 6
 
 [node name="Play" type="Button" parent="." unique_id=640649677]
-offset_left = 319.0
-offset_top = 165.0
-offset_right = 849.0
-offset_bottom = 305.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 633.0
+offset_top = 297.0
+offset_right = 1263.0
+offset_bottom = 503.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_5ysmq")
 text = "Play"
 
 [node name="Exit" type="Button" parent="." unique_id=695636035]
-offset_left = 320.0
-offset_top = 354.0
-offset_right = 850.0
-offset_bottom = 494.0
+offset_left = 656.0
+offset_top = 565.0
+offset_right = 1252.0
+offset_bottom = 771.0
 theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_vjb58")
 text = "Exit
