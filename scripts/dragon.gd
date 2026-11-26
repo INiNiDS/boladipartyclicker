@@ -1,6 +1,5 @@
 extends Node2D
 
-@export var hp: int = 200
 @onready var timer: Timer = $Timer
 @onready var texture_button: TextureButton = $TextureButton
 @onready var texture_hp: TextureProgressBar = $TextureProgressBar
@@ -8,7 +7,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	texture_hp.value = global.data.current_hp
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -27,14 +26,14 @@ func _on_texture_button_button_up() -> void:
 	timer.stop()
 
 func _on_texture_button_button_down() -> void:
-	timer.wait_time = global.pressed_time
-	attack.max_value = global.pressed_time
+	timer.wait_time = global.data.pressed_time
+	attack.max_value = global.data.pressed_time
 	timer.start()
 	
 func _on_timer_timeout() -> void:
-	hp -= 10
-	texture_hp.set_value(hp)
-	if hp <= 0:
+	global.data.current_hp -= 10
+	texture_hp.set_value(global.data.current_hp)
+	if global.data.current_hp <= 0:
 		texture_button.disabled = true
 		texture_button.queue_free()
-	global.blood_1 += 1
+	global.data.blood_1 += 1

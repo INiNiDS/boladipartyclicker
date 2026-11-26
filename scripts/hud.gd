@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 	update_label()
 
 func update_label() -> void:
-	label.set_text(str(global.blood_1))
+	label.set_text(str(global.data.blood_1))
