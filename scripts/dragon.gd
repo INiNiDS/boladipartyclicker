@@ -41,7 +41,7 @@ func _on_texture_button_button_down() -> void:
 	timer.wait_time = global.data.pressed_time
 	attack.max_value = global.data.pressed_time
 	timer.start()
-	if randf() < 1.0:
+	if randf() < 0.1:
 		spawn_timer.wait_time = randf_range(1.5,  global.data.pressed_time - 2.0)
 		spawn_timer.start()
 		
