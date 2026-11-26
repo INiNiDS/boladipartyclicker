@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dsbjd7bc6lmh7" path="res://assets/over.png" id="4_y46cm"]
 [ext_resource type="Texture2D" uid="uid://m353iom2463j" path="res://assets/progress.png" id="5_2yk6i"]
 [ext_resource type="Texture2D" uid="uid://cjavjo0ks7eg7" path="res://assets/progress2.png" id="6_y46cm"]
+[ext_resource type="Texture2D" uid="uid://bwjvj14ok7r4u" path="res://assets/bone.png" id="7_2yk6i"]
+[ext_resource type="FontFile" uid="uid://b5t7vgdx42dda" path="res://assets/Playpen_Sans/static/PlaypenSans-Regular.ttf" id="8_fe7o6"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_k6hos"]
 diffuse_texture = ExtResource("1_vfigm")
@@ -49,7 +51,37 @@ texture_under = ExtResource("3_kcfnc")
 texture_over = ExtResource("4_y46cm")
 texture_progress = ExtResource("6_y46cm")
 
+[node name="Hint" type="Label" parent="." unique_id=270358217]
+visible = false
+offset_left = 908.0
+offset_top = 50.0
+offset_right = 1233.0
+offset_bottom = 148.0
+rotation = 0.13264503
+theme_override_colors/font_color = Color(0.69652456, 0.69652456, 0, 1)
+theme_override_fonts/font = ExtResource("8_fe7o6")
+theme_override_font_sizes/font_size = 64
+text = "Press RBM"
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=250909628]
+one_shot = true
+
+[node name="ReactionTimer" type="Timer" parent="." unique_id=1572875370]
+one_shot = true
+
+[node name="Bone" type="TextureRect" parent="." unique_id=1800587666]
+visible = false
+offset_left = 594.0
+offset_top = 245.0
+offset_right = 678.0
+offset_bottom = 317.0
+mouse_filter = 2
+texture = ExtResource("7_2yk6i")
+expand_mode = 1
+
 [connection signal="button_down" from="TextureButton" to="." method="_on_texture_button_button_down"]
 [connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]
 [connection signal="mouse_exited" from="TextureButton" to="." method="_on_texture_button_mouse_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="ReactionTimer" to="." method="_on_reaction_timer_timeout"]
