@@ -53,8 +53,12 @@ func _on_timer_timeout() -> void:
 	global.data.current_hp -= 10
 	texture_hp.set_value(global.data.current_hp)
 	if global.data.current_hp <= 0:
-		texture_button.disabled = true
-		texture_button.queue_free()
+		if global.data.dragons >= 1:
+			global.data.dragons -= 1
+			global.data.current_hp = 200.0
+		else:
+			global.reset()
+			get_tree().change_scene_to_file("res://scenes/fail.tscn")
 		spawn_timer.stop()
 		reaction_timer.stop()
 		bone.hide()

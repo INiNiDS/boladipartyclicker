@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dtge715lujoto"]
+
+[ext_resource type="Texture2D" uid="uid://dsqhsgoil40uw" path="res://assets/menpau.png" id="1_iebtw"]
+[ext_resource type="Script" uid="uid://b4x46281u7j8n" path="res://scripts/fail.gd" id="1_mjm12"]
+[ext_resource type="FontFile" uid="uid://b5t7vgdx42dda" path="res://assets/Playpen_Sans/static/PlaypenSans-Regular.ttf" id="2_hpfg7"]
+
+[node name="Fail" type="Node2D" unique_id=1446898929]
+script = ExtResource("1_mjm12")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=906859060]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_iebtw")
+
+[node name="Label" type="Label" parent="." unique_id=1079499925]
+offset_left = 486.0
+offset_top = 34.0
+offset_right = 1760.0
+offset_bottom = 399.0
+theme_override_fonts/font = ExtResource("2_hpfg7")
+theme_override_font_sizes/font_size = 128
+text = "You losed :("
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=766752297]
+custom_maximum_size = Vector2(1000, -1)
+offset_left = 650.0
+offset_top = 266.0
+offset_right = 1650.0
+offset_bottom = 631.0
+theme_override_fonts/font = ExtResource("2_hpfg7")
+theme_override_font_sizes/font_size = 64
+text = "Hint: Always ensure you will have at least one dragon in backpack"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="." unique_id=1887224300]
+offset_left = 817.0
+offset_top = 699.0
+offset_right = 1292.0
+offset_bottom = 860.0
+theme_override_fonts/font = ExtResource("2_hpfg7")
+theme_override_font_sizes/font_size = 65
+text = "Try again"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
