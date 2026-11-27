@@ -1,17 +1,44 @@
 [gd_scene format=3 uid="uid://csyxphhd7es8r"]
 
+[ext_resource type="Script" uid="uid://cb2evbx21nyoi" path="res://scripts/game.gd" id="1_iywne"]
 [ext_resource type="Texture2D" uid="uid://dsqhsgoil40uw" path="res://assets/menpau.png" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://b1xs2sbb5ueki" path="res://scenes/dragon.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://ch5a1va1dhtth" path="res://scenes/hud.tscn" id="3_lbhrr"]
+[ext_resource type="FontFile" uid="uid://b5t7vgdx42dda" path="res://assets/Playpen_Sans/static/PlaypenSans-Regular.ttf" id="4_lbhrr"]
 
 [node name="Game" type="Node2D" unique_id=326632933]
+script = ExtResource("1_iywne")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2079467730]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -15.0
+offset_right = 1905.0
+offset_bottom = 1080.0
 texture = ExtResource("1_uwrxv")
 
 [node name="Dragon" parent="." unique_id=546860644 instance=ExtResource("2_lnu2h")]
 position = Vector2(354, 247)
 
 [node name="HUD" parent="." unique_id=1561195538 instance=ExtResource("3_lbhrr")]
+
+[node name="Label" type="Label" parent="." unique_id=1697295853]
+offset_left = 1440.0
+offset_top = -2.0
+offset_right = 1898.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.12135764, 0.4149599, 0, 1)
+theme_override_fonts/font = ExtResource("4_lbhrr")
+theme_override_font_sizes/font_size = 32
+text = "Hold on dragon to start"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Store" type="Button" parent="." unique_id=201628061]
+offset_left = 24.0
+offset_top = 975.0
+offset_right = 162.0
+offset_bottom = 1055.0
+theme_override_fonts/font = ExtResource("4_lbhrr")
+theme_override_font_sizes/font_size = 32
+text = "Store"
+
+[connection signal="pressed" from="Store" to="." method="_on_store_pressed"]

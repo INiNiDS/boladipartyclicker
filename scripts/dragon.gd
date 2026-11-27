@@ -30,12 +30,14 @@ func _on_texture_button_mouse_exited() -> void:
 		spawn_timer.stop()
 		reaction_timer.stop()
 		bone.hide()
+		label.hide()
 
 func _on_texture_button_button_up() -> void:
 	timer.stop()
 	spawn_timer.stop()
 	reaction_timer.stop()
 	bone.hide()
+	label.hide()
 
 func _on_texture_button_button_down() -> void:
 	timer.wait_time = global.data.pressed_time
@@ -56,16 +58,19 @@ func _on_timer_timeout() -> void:
 		spawn_timer.stop()
 		reaction_timer.stop()
 		bone.hide()
-	global.data.blood_1 += 1
+		label.hide()
+	global.data.blood_1 += global.data.blood_for_one
 
 func _on_reaction_timer_timeout() -> void:
 	timer.stop()
 	spawn_timer.stop()
 	reaction_timer.stop()
+	label.hide()
 	bone.hide()
 
 func _on_spawn_timer_timeout() -> void:
 	bone.show()
+	label.show()
 	reaction_timer.start()
 
 func _input(event: InputEvent) -> void:
@@ -73,3 +78,4 @@ func _input(event: InputEvent) -> void:
 		if bone.visible:
 			reaction_timer.stop()
 			bone.hide()
+			label.hide()

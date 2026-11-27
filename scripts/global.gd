@@ -25,4 +25,3 @@ func reset() -> void:
 	data = SuperSaver.new()
 	save_data()
 	
-# From dweaks (github.com/ininids/dweaks) Not in new update

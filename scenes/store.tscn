@@ -1,0 +1,204 @@
+[gd_scene format=3 uid="uid://b516o5p2ip1fi"]
+
+[ext_resource type="Script" uid="uid://1yuk204ot6a8" path="res://scripts/store.gd" id="1_codmc"]
+[ext_resource type="Texture2D" uid="uid://bu61htns2oirx" path="res://assets/store.png" id="1_jmp1n"]
+[ext_resource type="FontFile" uid="uid://b5t7vgdx42dda" path="res://assets/Playpen_Sans/static/PlaypenSans-Regular.ttf" id="2_atuvt"]
+[ext_resource type="PackedScene" uid="uid://ch5a1va1dhtth" path="res://scenes/hud.tscn" id="4_dq3y1"]
+[ext_resource type="Texture2D" uid="uid://b7eexbjab2ivj" path="res://assets/coin.png" id="4_vb4ln"]
+[ext_resource type="Texture2D" uid="uid://dujec8yaa2eey" path="res://assets/blood.png" id="5_tmp5q"]
+[ext_resource type="Texture2D" uid="uid://0q4ekomk8ost" path="res://assets/clock.png" id="6_phafb"]
+[ext_resource type="Texture2D" uid="uid://cj1lvk1i0egjh" path="res://assets/sss.png" id="7_tmp5q"]
+
+[node name="Store" type="Node2D" unique_id=565788843]
+script = ExtResource("1_codmc")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=144017016]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_jmp1n")
+
+[node name="Panel" type="Panel" parent="." unique_id=731454834]
+offset_left = 350.0
+offset_top = 835.0
+offset_right = 1030.0
+offset_bottom = 1065.0
+
+[node name="Coins" type="Button" parent="Panel" unique_id=1878711202]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 11.0
+offset_right = 211.0
+offset_bottom = 111.0
+
+[node name="Label" type="Label" parent="Panel/Coins" unique_id=480106785]
+layout_mode = 0
+offset_left = -36.0
+offset_top = 22.0
+offset_right = 46.0
+offset_bottom = 79.0
+theme_override_fonts/font = ExtResource("2_atuvt")
+theme_override_font_sizes/font_size = 32
+text = "10"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Coins" unique_id=901296430]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 10.0
+offset_right = 194.0
+offset_bottom = 87.0
+texture = ExtResource("4_vb4ln")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Panel/Coins" unique_id=1252060578]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 34.0
+offset_right = 104.0
+offset_bottom = 77.0
+texture = ExtResource("5_tmp5q")
+expand_mode = 1
+
+[node name="Faster" type="Button" parent="Panel" unique_id=975027188]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 11.0
+offset_right = 441.0
+offset_bottom = 111.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Faster" unique_id=1837161169]
+layout_mode = 0
+offset_left = 82.0
+offset_top = -24.0
+offset_right = 232.0
+offset_bottom = 123.0
+texture = ExtResource("6_phafb")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Panel/Faster" unique_id=1027723965]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 34.0
+offset_right = 104.0
+offset_bottom = 77.0
+texture = ExtResource("4_vb4ln")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Panel/Faster" unique_id=933672104]
+layout_mode = 0
+offset_left = -32.0
+offset_top = 26.0
+offset_right = 50.0
+offset_bottom = 83.0
+theme_override_fonts/font = ExtResource("2_atuvt")
+theme_override_font_sizes/font_size = 32
+text = "2"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="MoreBlood" type="Button" parent="Panel" unique_id=1803569237]
+layout_mode = 0
+offset_left = 469.0
+offset_top = 12.0
+offset_right = 669.0
+offset_bottom = 112.0
+
+[node name="Label" type="Label" parent="Panel/MoreBlood" unique_id=1968932985]
+layout_mode = 0
+offset_left = -30.0
+offset_top = 25.0
+offset_right = 52.0
+offset_bottom = 82.0
+theme_override_fonts/font = ExtResource("2_atuvt")
+theme_override_font_sizes/font_size = 32
+text = "2"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel/MoreBlood" unique_id=457137574]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 15.0
+offset_right = 196.0
+offset_bottom = 93.0
+texture = ExtResource("5_tmp5q")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Panel/MoreBlood" unique_id=1281952346]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 34.0
+offset_right = 104.0
+offset_bottom = 77.0
+texture = ExtResource("4_vb4ln")
+expand_mode = 1
+
+[node name="NewDragon" type="Button" parent="Panel" unique_id=1252869346]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 118.0
+offset_right = 666.0
+offset_bottom = 218.0
+
+[node name="Label" type="Label" parent="Panel/NewDragon" unique_id=579556141]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 21.0
+offset_right = 308.0
+offset_bottom = 78.0
+theme_override_fonts/font = ExtResource("2_atuvt")
+theme_override_font_sizes/font_size = 32
+text = "2"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel/NewDragon" unique_id=833075696]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 15.0
+offset_right = 474.0
+offset_bottom = 99.0
+texture = ExtResource("7_tmp5q")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Panel/NewDragon" unique_id=270821444]
+layout_mode = 0
+offset_left = 319.0
+offset_top = 30.0
+offset_right = 367.0
+offset_bottom = 73.0
+texture = ExtResource("4_vb4ln")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=911570262]
+custom_maximum_size = Vector2(400, 300)
+offset_left = 1090.0
+offset_top = 48.0
+offset_right = 1490.0
+offset_bottom = 348.0
+theme_override_colors/font_color = Color(0.46132064, 0.29818648, 1.4439226e-07, 1)
+theme_override_fonts/font = ExtResource("2_atuvt")
+theme_override_font_sizes/font_size = 32
+text = "Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla Bla bla bla bla bla bla bla 
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="." unique_id=1958028619]
+offset_left = 64.0
+offset_top = 932.0
+offset_right = 243.0
+offset_bottom = 1029.0
+theme_override_fonts/font = ExtResource("2_atuvt")
+theme_override_font_sizes/font_size = 32
+text = "<- Back"
+
+[node name="HUD" parent="." unique_id=1561195538 instance=ExtResource("4_dq3y1")]
+
+[connection signal="pressed" from="Panel/Coins" to="." method="_on_coins_pressed"]
+[connection signal="pressed" from="Panel/Faster" to="." method="_on_faster_pressed"]
+[connection signal="pressed" from="Panel/MoreBlood" to="." method="_on_more_blood_pressed"]
+[connection signal="pressed" from="Panel/NewDragon" to="." method="_on_new_dragon_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
